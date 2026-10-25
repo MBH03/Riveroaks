@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Riveroak Design | Custom websites built from scratch</title>
+<meta name="description" content="I design websites that look like your business, whether that is bold and sharp or calm and soft. No templates.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap">
+<style>
+/* Built from Mike's mobile design export (Mobile.dc.html). Mobile values are copied exactly; wider screens get a layout of their own. */
+:root{
+  --bg:#FBF7F0;--ink:#151515;--muted:#6B6560;--accent:#4B1F95;--accent-soft:#B9A4F0;
+  --rule:#E6DDCF;--card-line:#E1D7C8;--dash:#D9CCB6;--tick:#B9AFA2;--soft-ink:#4A453F;
+  --serif:"Instrument Serif",Georgia,"Times New Roman",serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+em{font-style:italic;font-weight:300;color:var(--accent)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0}
+.eyebrow{display:flex;align-items:center;gap:14px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+.eyebrow::before{content:"";width:44px;height:1px;background:var(--tick);flex:none}
+.arrow{width:18px;height:18px;flex:none}
+.link{display:inline-flex;align-items:center;min-height:44px;font-size:17px;font-weight:500}
+.link span{border-bottom:1px solid var(--ink);padding-bottom:4px;display:inline-flex;align-items:center;gap:10px}
+.pillbtn{display:inline-flex;align-items:center;justify-content:center;gap:12px;border-radius:999px;background:var(--ink);color:var(--bg);font-size:17px;font-weight:500;transition:transform .2s}
+.pillbtn:hover{transform:translateY(-1px)}
+
+/* HERO */
+.hero{padding:48px 0 72px}
+.hero .logo{display:block;height:104px;width:auto}
+.hero h1{margin:36px 0 0;font-size:clamp(56px,18.5vw,72px);line-height:.96;letter-spacing:-.035em}
+.hero .sub{margin:28px 0 0;font-size:18px;line-height:1.55;color:var(--muted)}
+.hero .cta{display:flex;flex-wrap:wrap;align-items:center;gap:16px 20px;margin-top:32px}
+.hero .cta .pillbtn{height:56px;padding:0 28px;box-shadow:0 12px 26px rgba(21,21,21,.18)}
+.hero .time{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.hero .photo{display:block;width:100%;height:340px;object-fit:cover;border-radius:28px;margin-top:48px;box-shadow:0 24px 50px rgba(60,40,20,.14)}
+
+/* OFFER */
+.offer{border-top:1px solid var(--rule);padding:80px 0 72px}
+.offer h2{margin:28px 0 0;font-size:clamp(44px,14.4vw,56px);line-height:1;letter-spacing:-.03em}
+.offer .lead{margin:28px 0 0;font-size:17px;color:var(--muted)}
+.steps{margin-top:48px;border:1px solid var(--card-line);border-radius:28px;overflow:hidden;background:#FDFBF6}
+.step{padding:28px 28px 36px;border-bottom:1px solid var(--card-line)}
+.step:last-child{border-bottom:0}
+.step .n{font-size:13px;letter-spacing:.16em;color:#7A736C}
+.step h3{margin:56px 0 12px;font-size:32px;line-height:1.1;letter-spacing:-.02em}
+.step p{margin:0;color:var(--muted)}
+
+/* WORK */
+.work{border-top:1px solid var(--rule);padding:72px 0 80px}
+.work h2{margin:28px 0 0;font-size:clamp(38px,12.3vw,48px);line-height:1.02;letter-spacing:-.03em}
+.projects{display:grid;grid-template-columns:minmax(0,1fr);gap:56px;margin-top:48px}
+.project{min-width:0}
+.shots{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -20px;padding:0 20px 12px;-webkit-overflow-scrolling:touch}
+.shot{flex:0 0 236px;scroll-snap-align:start;border:7px solid #1C1B1A;border-radius:34px;overflow:hidden;background:#1C1B1A;box-shadow:0 20px 40px rgba(60,40,20,.2)}
+.shot img{display:block;width:100%;height:auto}
+.project h3{margin:28px 0 0;font-size:32px;line-height:1.1;letter-spacing:-.02em}
+.project p{margin:10px 0 0;color:var(--muted)}
+.project .link{margin-top:16px}
+.fog{display:block;width:100%;height:300px;object-fit:cover}
+
+/* PRICING */
+.pricing{background:#FBF0E0;padding:80px 0 72px}
+.pricing .eyebrow{letter-spacing:.2em}
+.pricing h2{margin:28px 0 0;font-size:clamp(44px,14.4vw,56px);line-height:1;letter-spacing:-.03em}
+.pricing .lead{margin:24px 0 0;font-size:17px;color:var(--muted)}
+.plans{display:flex;flex-direction:column;gap:20px;margin-top:44px}
+.plan{border-radius:28px;padding:32px 26px;border:1px solid #E4D9C6;background:#FDFBF6}
+.plan.top{background:linear-gradient(160deg,#fff 0%,#FBF3E4 100%);border-color:var(--dash);box-shadow:0 24px 50px rgba(80,55,25,.14)}
+.plan.addon{background:#F8F1E4}
+.plan.care{background:var(--ink);color:var(--bg);border:0}
+.plan .head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.plan .tier{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.plan.care .tier{color:#B9B2A8}
+.badge{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--soft-ink);border:1px solid #E1D5C0;border-radius:999px;padding:8px 14px;background:#fff}
+.badge.dark{color:var(--bg);background:var(--ink);border-color:var(--ink);padding:9px 16px}
+.price{margin-top:32px;display:flex;align-items:baseline;gap:10px}
+.price b{font-family:var(--serif);font-weight:400;font-size:68px;line-height:1;letter-spacing:-.03em}
+.price span{font-size:16px;color:var(--muted)}
+.plan.addon .price b{color:#3A3632}
+.plan.care .price{margin-top:28px}
+.plan.care .price b{font-size:76px}
+.plan.care .price span{color:#B9B2A8}
+.founding{margin-top:14px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--soft-ink)}
+.founding s{margin-left:8px;color:var(--muted)}
+.plan p{margin:18px 0 0;color:var(--muted)}
+.plan p.small{margin:12px 0 0;font-size:15px}
+.plan.care p{color:#B9B2A8;margin-top:16px}
+.tag{margin-top:18px;border:1px solid #E1D5C0;background:#F3EADA;border-radius:20px;padding:12px 18px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft-ink);line-height:1.5}
+.list{margin:24px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px}
+.list li{display:flex;gap:14px;align-items:flex-start;color:var(--soft-ink)}
+.list li::before{content:"";width:18px;height:1px;background:var(--tick);margin-top:13px;flex:none}
+.plan.care .list li{color:#E6E0D6}
+.plan.care .list li::before{background:#6B655E}
+.plan p.note{margin:28px 0 0;padding-top:20px;border-top:1px dashed var(--dash);font-size:14px;line-height:1.55}
+.pay{margin-top:24px;border:1px dashed #CFC3AE;background:#fff;border-radius:20px;padding:18px 20px}
+.pay .t{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.pay p{margin:10px 0 0;font-size:15px;line-height:1.55;color:#3A3632}
+.pay p+p{margin-top:8px}
+.pay strong{font-weight:500}
+.plan .pillbtn{margin-top:32px;width:100%;height:58px}
+.plan.care .pillbtn{background:var(--bg);color:var(--ink);height:56px;margin-top:28px}
+.plan .link{margin-top:28px}
+
+/* CONTACT */
+.contact{background:var(--ink);color:var(--bg);padding:80px 0 150px}
+.how{display:inline-flex;align-items:center;gap:12px;height:44px;padding:0 20px;border-radius:999px;border:1px solid #3A3835;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#B9B2A8}
+.how::before{content:"";width:8px;height:8px;border-radius:50%;background:#B9B2A8}
+.contact h2{margin:32px 0 0;font-size:clamp(44px,14.4vw,56px);line-height:1;letter-spacing:-.03em}
+.contact h2 em{color:var(--accent-soft)}
+.candle{display:block;width:100%;height:240px;object-fit:cover;object-position:62% 45%;border-radius:28px;margin-top:40px}
+.start{margin-top:20px;background:var(--bg);color:var(--ink);border-radius:28px;padding:32px 24px}
+.start h3{font-size:40px;letter-spacing:-.02em;line-height:1.05}
+.start p{margin:16px 0 0;font-size:17px;color:#5E5852}
+.start .pillbtn{margin-top:28px;width:100%;height:60px;font-size:18px}
+.start .row{display:flex;gap:12px;margin-top:12px}
+.start .row>*{flex:1 1 0;display:flex;align-items:center;justify-content:center;height:52px;border-radius:999px;border:1px solid #D9D0C2;font-size:16px;text-align:center}
+.start .mail{margin:24px 0 0;font-size:15px;word-break:break-word}
+.start .mail a{border-bottom:1px solid var(--ink)}
+.also{margin:56px 0 0;max-width:34em;font-size:17px;line-height:1.6;color:#B9B2A8;text-wrap:pretty}
+.foot-logo{display:block;height:110px;width:auto;margin-top:48px}
+.legal{margin-top:36px;padding-top:24px;border-top:1px solid #2E2C2A;display:flex;flex-direction:column;gap:10px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#A8A29A}
+
+/* FLOATING NAV */
+.pill{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:20;display:flex;align-items:center;gap:2px;padding:6px;border-radius:999px;background:#1C1B1A;box-shadow:0 16px 40px rgba(0,0,0,.3);max-width:calc(100vw - 24px)}
+.pill a{display:flex;align-items:center;height:44px;padding:0 12px;border-radius:999px;color:#C9C3BA;font-size:14px;transition:background .2s,color .2s}
+.pill a.on{background:#fff;color:var(--ink);font-weight:500;padding:0 14px}
+.pill a.start-link{gap:6px;padding:0 14px;margin-left:4px;background:var(--bg);color:var(--ink);font-weight:500}
+.pill svg{width:14px;height:14px}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.pillbtn{transition:none}}
+
+/* Wider screens: the design was drawn at phone width, so these layouts are new. */
+@media (min-width:900px){
+  .wrap{padding-left:max(40px,env(safe-area-inset-left,0px));padding-right:max(40px,env(safe-area-inset-right,0px))}
+  .hero{padding:72px 0 96px}
+  .hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:64px;align-items:center}
+  .hero h1{font-size:clamp(72px,7.4vw,104px)}
+  .hero .photo{height:560px;margin-top:0}
+  .offer{padding:112px 0}
+  .offer h2{font-size:72px;max-width:15ch}
+  .offer .lead{max-width:34em;font-size:19px}
+  .steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:64px}
+  .step{border-bottom:0;border-right:1px solid var(--card-line);padding:32px 32px 44px}
+  .step:last-child{border-right:0}
+  .work{padding:104px 0 112px}
+  .work h2{font-size:64px;max-width:14ch}
+  .projects{grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;margin-top:64px}
+  .shots{margin:0;padding:0 0 12px}
+  .fog{height:420px}
+  .pricing{padding:112px 0 104px}
+  .pricing h2{font-size:72px;max-width:15ch}
+  .pricing .lead{max-width:36em;font-size:19px}
+  .plans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start;margin-top:56px}
+  .plan{padding:40px 36px}
+  .contact{padding:112px 0 160px}
+  .contact .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 64px;align-items:start}
+  .contact .intro{grid-column:1}
+  .contact .intro h2{font-size:80px}
+  .contact .candle{margin-top:40px;height:320px}
+  .contact .start{grid-column:2;grid-row:1 / span 2;margin-top:0;padding:48px 40px}
+  .contact .base{grid-column:1 / -1}
+}
+</style>
+</head>
+<body>
+<main id="top">
+
+<section class="hero"><div class="wrap">
+  <div>
+    <img class="logo" src="images/logo-light.png" alt="Riveroak Design" width="176" height="104">
+    <h1>Take your business <em>beautifully</em> online</h1>
+    <p class="sub">I design websites that look like your business, whether that is bold and sharp or calm and soft. No templates.</p>
+    <div class="cta">
+      <a class="pillbtn" href="#offer">See what I do <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <span class="time">Two to three week timeline</span>
+    </div>
+  </div>
+  <img class="photo" src="images/hero-desk.jpg" alt="A laptop on a sunlit wooden desk showing a calm, editorial website design" width="1500" height="938">
+</div></section>
+
+<section class="offer" id="offer"><div class="wrap">
+  <div class="eyebrow">What I offer</div>
+  <h2>Built from scratch, <em>to fit you.</em></h2>
+  <p class="lead">Bold or calm, sharp or soft, your site looks like your business. Never a template, and built with care so Google can find you.</p>
+  <div class="steps">
+    <div class="step"><span class="n">01</span><h3>Custom Design</h3><p>No templates. Every site is built from scratch around your photos and your story.</p></div>
+    <div class="step"><span class="n">02</span><h3>Build &amp; Launch</h3><p>Your web address, hosting, and a fast site that works on phones and is set up for Google. I handle the tech.</p></div>
+    <div class="step"><span class="n">03</span><h3>Care &amp; Growth</h3><p>Fourteen days of small fixes after launch come with every site. After that, ongoing care is an optional plan.</p></div>
+  </div>
+</div></section>
+
+<section class="work" id="work"><div class="wrap">
+  <div class="eyebrow">Recent work</div>
+  <h2>Sites I have built, <em>each one different.</em></h2>
+  <div class="projects">
+    <div class="project">
+      <div class="shots" tabindex="0" role="group" aria-label="Henrie Outfitters screenshots, scroll sideways">
+        <div class="shot"><img src="images/henrie-1.jpg" alt="Henrie Outfitters home screen with a mountain lake and the headline Guided fishing trips in Southern Utah" width="560" height="929" loading="lazy"></div>
+        <div class="shot"><img src="images/henrie-2.jpg" alt="Henrie Outfitters lake card for Lake Powell with fish species tags" width="560" height="929" loading="lazy"></div>
+      </div>
+      <h3>Henrie Outfitters</h3>
+      <p>Bold and outdoorsy. Guided fishing and hunting in Southern Utah, built around six lakes and one local guide.</p>
+      <a class="link" href="https://henrieoutfitters.com" target="_blank" rel="noopener"><span>Visit the site <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    </div>
+    <div class="project">
+      <div class="shots" tabindex="0" role="group" aria-label="First Time Managers screenshots, scroll sideways">
+        <div class="shot"><img src="images/ftm-1.jpg" alt="First Time Managers home screen with the headline The scripts, templates, and tools for the parts of work nobody taught you" width="560" height="929" loading="lazy"></div>
+        <div class="shot"><img src="images/ftm-2.jpg" alt="First Time Managers playbook cards on a dark background" width="560" height="929" loading="lazy"></div>
+      </div>
+      <h3>First Time Managers</h3>
+      <p>Clean and practical. Free scripts, templates, and playbooks for the parts of work nobody taught new managers.</p>
+      <a class="link" href="https://first-timemanagers.com" target="_blank" rel="noopener"><span>Visit the site <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    </div>
+  </div>
+</div></section>
+
+<img class="fog" src="images/fog.jpg" alt="Pine forest and mountains in soft morning fog" width="1600" height="976" loading="lazy">
+
+<section class="pricing" id="pricing"><div class="wrap">
+  <div class="eyebrow">Pricing, two ways to launch</div>
+  <h2>Simple, honest pricing, <em>no surprises.</em></h2>
+  <p class="lead">One time prices, with no monthly fees to me. You buy your own web address and when the site is built I hand over everything, so you own it all. Ongoing care and a Facebook ad campaign are optional.</p>
+
+  <div class="plans">
+    <div class="plan top">
+      <div class="head"><span class="tier">Complete</span><span class="badge dark">Top tier</span></div>
+      <div class="price"><b>$1,500</b><span>all in</span></div>
+      <div class="founding">Founding client price <s>$2,500 regular</s></div>
+      <p class="small">For my first five clients, in exchange for a testimonial and permission to show your site.</p>
+      <div class="tag">Website plus one time campaign</div>
+      <p>The website and a Facebook ad campaign together, so people see your site the day it goes live.</p>
+      <ul class="list">
+        <li>Everything in Launch</li>
+        <li>A Facebook ad campaign, built and tested for you</li>
+        <li>Ad management plus up to $550 in ads included</li>
+      </ul>
+      <p class="note small">You buy your own web address, so you keep it. It usually runs around $15 per year, paid to the seller and not to me.</p>
+      <a class="pillbtn" href="mailto:mikeriveroakdesign@gmail.com?subject=Complete%20package">Get the $1,500 Complete <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+
+    <div class="plan">
+      <div class="head"><span class="tier">Launch</span><span class="badge">Website only</span></div>
+      <div class="price"><b>$500</b><span>one time</span></div>
+      <div class="founding">Founding client price <s>$1,500 regular</s></div>
+      <p class="small">For my first five clients, in exchange for a testimonial and permission to show your site.</p>
+      <p>A beautiful custom website, built from scratch. No templates.</p>
+      <ul class="list">
+        <li>Custom homepage and four inner pages</li>
+        <li>Works on phones and is set up for Google</li>
+        <li>Everything handed over, so you own it and owe me nothing</li>
+        <li>Fourteen days of free fixes after launch</li>
+      </ul>
+      <p class="note small">You buy your own web address, so you keep it. It usually runs around $15 per year, paid to the seller and not to me.</p>
+      <a class="link" href="mailto:mikeriveroakdesign@gmail.com?subject=Launch%20package"><span>Start for $500 <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    </div>
+
+    <div class="plan addon">
+      <div class="head"><span class="tier">Add on</span><span class="badge">For any package</span></div>
+      <div class="price"><b>$1,000</b><span>all in</span></div>
+      <p>A real ad campaign is more than boosting a post. Add it to any site, with two ways to pay for the ads.</p>
+      <ul class="list">
+        <li>Tracking set up on your site</li>
+        <li>Three to four audiences researched and tested</li>
+        <li>Two to three ads built from your site photos</li>
+        <li>Daily checks for seven to fifteen days</li>
+        <li>A report on what worked</li>
+      </ul>
+      <div class="pay">
+        <div class="t">Payment options</div>
+        <p><strong>$1,000 all in:</strong> I cover everything, including Facebook spend.</p>
+        <p><strong>$450 plus $50 per day:</strong> you pay Facebook directly, and I charge $450 for management.</p>
+      </div>
+      <a class="link" href="mailto:mikeriveroakdesign@gmail.com?subject=Campaign%20add%20on"><span>Add the campaign to any site <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    </div>
+
+    <div class="plan care">
+      <span class="tier">Ongoing care, optional</span>
+      <div class="price"><b>$99</b><span>per month</span></div>
+      <p>Fourteen days of fixes come with every site. After that, keep your site fresh with a simple monthly plan.</p>
+      <ul class="list">
+        <li>Up to three small edits each month</li>
+        <li>One new page each month</li>
+        <li>Basic upkeep and quick turnaround</li>
+        <li>Nothing carries over. Bigger work is quoted separately.</li>
+      </ul>
+      <a class="pillbtn" href="mailto:mikeriveroakdesign@gmail.com?subject=Ongoing%20care">Add ongoing care <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <div class="intro">
+    <div class="how">How it starts</div>
+    <h2>Let us build something <em>made for you.</em></h2>
+    <img class="candle" src="images/laptop-desk.jpg" alt="A laptop on a wooden desk by a bright window, with green plants in the foreground" width="1400" height="934" loading="lazy">
+  </div>
+  <div class="start">
+    <h3>Start a project</h3>
+    <p>Tell me about your business. I reply within a day with ideas and next steps.</p>
+    <a class="pillbtn" href="mailto:mikeriveroakdesign@gmail.com?subject=Start%20a%20project&amp;body=1.%20What%20is%20your%20business%20name%2C%20and%20how%20should%20it%20appear%20on%20the%20website%3F%0D%0A%0D%0A%0D%0A2.%20Briefly%20describe%20your%20business%20and%20the%20services%20you%20offer.%0D%0A%0D%0A%0D%0A3.%20Who%20are%20your%20ideal%20customers%3F%0D%0A%0D%0A%0D%0A4.%20What%20websites%20do%20you%20like%2C%20and%20what%20do%20you%20like%20about%20their%20design%3F%0D%0A%0D%0A%0D%0A5.%20Do%20you%20have%20a%20logo%2C%20photos%2C%20brand%20colors%2C%20or%20existing%20content%20to%20use%3F%0D%0A%0D%0A%0D%0A6.%20What%20is%20your%20target%20launch%20date%2C%20and%20what%20would%20make%20this%20website%20a%20success%20for%20your%20business%3F%0D%0A%0D%0A">Start a project <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <div class="row"><a href="#top">Back to top</a></div>
+    <p class="mail">Or write to <a href="mailto:mikeriveroakdesign@gmail.com">mikeriveroakdesign@gmail.com</a></p>
+  </div>
+  <div class="base">
+    <p class="also">While I can build your website, I&rsquo;ve also partnered with a full development team if you ever need custom software. I can also connect you with people who can help with bookkeeping, taxes or setting up payment processing.</p>
+    <img class="foot-logo" src="images/logo-dark.png" alt="Riveroak Design" width="195" height="110" loading="lazy">
+    <div class="legal"><span>&copy; 2026 Riveroak Design. Custom web design.</span><span>Built from scratch for your business.</span></div>
+  </div>
+</div></section>
+</main>
+
+<nav class="pill" aria-label="Sections">
+  <a href="#offer" data-s="offer" class="on">Offer</a>
+  <a href="#pricing" data-s="pricing">Pricing</a>
+  <a href="#contact" data-s="contact">Contact</a>
+  <a class="start-link" href="#contact">Start <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</nav>
+
+<script>
+// Highlight the floating nav item for the section in view. Without script, the first item stays lit.
+(function(){
+  if(!('IntersectionObserver' in window))return;
+  var links={};document.querySelectorAll('.pill a[data-s]').forEach(function(a){links[a.dataset.s]=a;});
+  var map={offer:'offer',work:'offer',pricing:'pricing',contact:'contact'};
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting)return;
+      var k=map[e.target.id];if(!k)return;
+      Object.keys(links).forEach(function(x){links[x].classList.toggle('on',x===k);});
+    });
+  },{rootMargin:'-45% 0px -50% 0px'});
+  ['offer','work','pricing','contact'].forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});
+})();
+</script>
+</body>
+</html>
