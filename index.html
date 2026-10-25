@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Riveroak Design | Custom websites built from scratch</title>
 <meta name="description" content="I design websites that look like your business, whether that is bold and sharp or calm and soft. No templates.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Riveroak Design","description":"Custom websites built from scratch for small businesses. Fast, mobile friendly, and set up so search engines can understand them.","email":"mikeriveroakdesign@gmail.com","serviceType":"Custom web design"}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap">
@@ -53,6 +56,11 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0}
 .step .n{font-size:13px;letter-spacing:.16em;color:#7A736C}
 .step h3{margin:56px 0 12px;font-size:32px;line-height:1.1;letter-spacing:-.02em}
 .step p{margin:0;color:var(--muted)}
+
+.found{margin-top:48px;padding:36px 28px;border-radius:28px;background:#FBF0E0;border:1px solid #E4D9C6}
+.found h3{margin:0;font-size:clamp(34px,10.5vw,40px);line-height:1.05;letter-spacing:-.025em}
+.found p{margin:18px 0 0;color:var(--muted)}
+.found .list{margin-top:24px}
 
 /* WORK */
 .work{border-top:1px solid var(--rule);padding:72px 0 80px}
@@ -110,6 +118,22 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0}
 .plan.care .pillbtn{background:var(--bg);color:var(--ink);height:56px;margin-top:28px}
 .plan .link{margin-top:28px}
 
+
+/* Optional extras: set apart and quieter so the two website packages stay the focus */
+.extras-head{display:flex;align-items:center;gap:16px;margin-top:72px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.extras-head::before,.extras-head::after{content:"";flex:1;height:1px;background:var(--dash)}
+.plans.extras{margin-top:28px}
+.extras .plan{padding:26px 22px;box-shadow:none}
+.extras .price{margin-top:22px}
+.extras .price b,.extras .plan.care .price b{font-size:44px}
+.extras .plan.addon{background:transparent}
+.extras .plan.care{background:transparent;color:var(--ink);border:1px solid #E4D9C6}
+.extras .plan.care .tier,.extras .plan.care .price span{color:var(--muted)}
+.extras .plan.care p{color:var(--muted)}
+.extras .plan.care .list li{color:var(--soft-ink)}
+.extras .plan.care .list li::before{background:var(--tick)}
+.extras .plan.care .pillbtn{background:transparent;color:var(--ink);border:1px solid var(--ink);height:52px}
+
 /* CONTACT */
 .contact{background:var(--ink);color:var(--bg);padding:80px 0 150px}
 .how{display:inline-flex;align-items:center;gap:12px;height:44px;padding:0 20px;border-radius:999px;border:1px solid #3A3835;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#B9B2A8}
@@ -125,7 +149,8 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0}
 .start .row>*{flex:1 1 0;display:flex;align-items:center;justify-content:center;height:52px;border-radius:999px;border:1px solid #D9D0C2;font-size:16px;text-align:center}
 .start .mail{margin:24px 0 0;font-size:15px;word-break:break-word}
 .start .mail a{border-bottom:1px solid var(--ink)}
-.also{margin:56px 0 0;max-width:34em;font-size:17px;line-height:1.6;color:#B9B2A8;text-wrap:pretty}
+.also{margin:64px 0 0;padding-top:40px;border-top:1px solid #2E2C2A;max-width:24em;font-family:var(--serif);font-size:clamp(26px,7.4vw,34px);line-height:1.2;letter-spacing:-.01em;color:var(--bg);text-wrap:pretty}
+.also em{color:var(--accent-soft)}
 .foot-logo{display:block;height:110px;width:auto;margin-top:48px}
 .legal{margin-top:36px;padding-top:24px;border-top:1px solid #2E2C2A;display:flex;flex-direction:column;gap:10px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#A8A29A}
 
@@ -161,6 +186,8 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0}
   .pricing .lead{max-width:36em;font-size:19px}
   .plans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start;margin-top:56px}
   .plan{padding:40px 36px}
+  .extras-head{margin-top:96px}
+  .extras .plan{padding:30px 28px}
   .contact{padding:112px 0 160px}
   .contact .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 64px;align-items:start}
   .contact .intro{grid-column:1}
@@ -196,6 +223,16 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0}
     <div class="step"><span class="n">02</span><h3>Build &amp; Launch</h3><p>Your web address, hosting, and a fast site that works on phones and is set up for Google. I handle the tech.</p></div>
     <div class="step"><span class="n">03</span><h3>Care &amp; Growth</h3><p>Fourteen days of small fixes after launch come with every site. After that, ongoing care is an optional plan.</p></div>
   </div>
+  <div class="found">
+    <h3>Built so Google <em>can find you.</em></h3>
+    <p>A good looking site does not help if nobody finds it. Every site I build is set up from the start with the basics search engines look for. No one can honestly promise a first place ranking, but a clean, fast foundation gives you the best chance of showing up when customers search.</p>
+    <ul class="list">
+      <li>Fast loading and works on phones, which Google looks at</li>
+      <li>Clear page titles, headings and descriptions</li>
+      <li>Descriptions on every image, so search engines understand them</li>
+      <li>Your business details added in a form search engines can read</li>
+    </ul>
+  </div>
 </div></section>
 
 <section class="work" id="work"><div class="wrap">
@@ -230,7 +267,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0}
   <h2>Simple, honest pricing, <em>no surprises.</em></h2>
   <p class="lead">One time prices, with no monthly fees to me. You buy your own web address and when the site is built I hand over everything, so you own it all. Ongoing care and a Facebook ad campaign are optional.</p>
 
-  <div class="plans">
+  <div class="plans main">
     <div class="plan top">
       <div class="head"><span class="tier">Complete</span><span class="badge dark">Top tier</span></div>
       <div class="price"><b>$1,500</b><span>all in</span></div>
@@ -263,6 +300,10 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0}
       <a class="link" href="mailto:mikeriveroakdesign@gmail.com?subject=Launch%20package"><span>Start for $500 <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
     </div>
 
+  </div>
+
+  <div class="extras-head"><span>Optional extras</span></div>
+  <div class="plans extras">
     <div class="plan addon">
       <div class="head"><span class="tier">Add on</span><span class="badge">For any package</span></div>
       <div class="price"><b>$1,000</b><span>all in</span></div>
@@ -311,7 +352,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0}
     <p class="mail">Or write to <a href="mailto:mikeriveroakdesign@gmail.com">mikeriveroakdesign@gmail.com</a></p>
   </div>
   <div class="base">
-    <p class="also">While I can build your website, I&rsquo;ve also partnered with a full development team if you ever need custom software. I can also connect you with people who can help with bookkeeping, taxes or setting up payment processing.</p>
+    <p class="also">While I can build your website, I&rsquo;ve also partnered with <em>a full development team</em> if you ever need custom software. I can also connect you with people who can help with bookkeeping, taxes or setting up payment processing.</p>
     <img class="foot-logo" src="images/logo-dark.png" alt="Riveroak Design" width="195" height="110" loading="lazy">
     <div class="legal"><span>&copy; 2026 Riveroak Design. Custom web design.</span><span>Built from scratch for your business.</span></div>
   </div>
