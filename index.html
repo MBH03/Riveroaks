@@ -8,6 +8,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ProfessionalService","name":"Riveroak Design","description":"Custom websites built from scratch for small businesses. Fast, mobile friendly, and set up so search engines can understand them.","email":"mikeriveroakdesign@gmail.com","serviceType":"Custom web design"}
 </script>
+<script>document.documentElement.classList.add("js");setTimeout(function(){if(!document.documentElement.dataset.rv)document.documentElement.classList.remove("js")},3000);</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap">
@@ -72,6 +73,8 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0}
 .stage .n{font-size:13px;letter-spacing:.16em;color:#7A736C;padding-top:8px}
 .stage h3{font-size:30px;line-height:1.1;letter-spacing:-.02em}
 .stage p{margin:10px 0 0;color:var(--muted)}
+.stage strong{font-weight:500;color:var(--ink)}
+.stage p.aside{margin-top:18px;padding:16px 18px;border-radius:16px;background:#FDF8EF;border:1px solid #E6D9C4;font-size:15px;line-height:1.55;color:var(--soft-ink)}
 
 
 /* INCLUDES */
@@ -157,8 +160,13 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0}
 .extras .plan.care .tier,.extras .plan.care .price span{color:var(--muted)}
 .extras .plan.care p{color:var(--muted)}
 .extras .plan.care .list li{color:var(--soft-ink)}
+.plan p.fine{margin:18px 0 0;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .extras .plan.care .list li::before{background:var(--tick)}
 .extras .plan.care .pillbtn{background:transparent;color:var(--ink);border:1px solid var(--ink);height:52px}
+
+.hosting{margin-top:56px;padding-top:32px;border-top:1px solid var(--dash);max-width:44em}
+.hosting h3{font-size:28px;line-height:1.1;letter-spacing:-.02em}
+.hosting p{margin:12px 0 0;color:var(--muted)}
 
 /* CONTACT */
 .contact{background:var(--ink);color:var(--bg);padding:80px 0 150px}
@@ -179,6 +187,12 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0}
 .also em{color:var(--accent-soft)}
 .foot-logo{display:block;height:110px;width:auto;margin-top:48px}
 .legal{margin-top:36px;padding-top:24px;border-top:1px solid #2E2C2A;display:flex;flex-direction:column;gap:10px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#A8A29A}
+
+
+/* SCROLL REVEAL: content is visible by default; it is only hidden once the script has started and then eased in */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0ms)}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}}
 
 /* FLOATING NAV */
 .pill{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:20;display:flex;align-items:center;gap:2px;padding:6px;border-radius:999px;background:#1C1B1A;box-shadow:0 16px 40px rgba(0,0,0,.3);max-width:calc(100vw - 24px)}
@@ -257,7 +271,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0}
   <div class="steps">
     <div class="step"><span class="n">01</span><h3>Custom Design</h3><p>No templates. Every site is built from scratch around your photos and your story.</p></div>
     <div class="step"><span class="n">02</span><h3>Build &amp; Launch</h3><p>Your web address, hosting, and a fast site that works on phones and is set up for Google. I handle the tech.</p></div>
-    <div class="step"><span class="n">03</span><h3>Care &amp; Growth</h3><p>Fourteen days of small fixes after launch come with every site. After that, ongoing care is an optional plan.</p></div>
+    <div class="step"><span class="n">03</span><h3>Care &amp; Growth</h3><p>14 days of minor fixes after launch come with every site. After that, ongoing care is an optional plan.</p></div>
   </div>
   <div class="found">
     <h3>Built so Google <em>can find you.</em></h3>
@@ -265,7 +279,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0}
     <ul class="list">
       <li>Fast loading and works on phones, which Google looks at</li>
       <li>Clear page titles, headings and descriptions</li>
-      <li>Descriptions on every image, so search engines understand them</li>
+      <li>Descriptive alt text for meaningful images, so search engines understand them</li>
     </ul>
   </div>
 </div></section>
@@ -302,12 +316,12 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0}
     <p class="lead">One price covers every step below. I handle the parts most people have never had to think about.</p>
   </div>
   <ol class="stages">
-    <li class="stage"><span class="n">01</span><div><h3>You tell me about your business</h3><p>Six questions about your business, your customers and the sites you like. I reply within a day with ideas and next steps.</p></div></li>
-    <li class="stage"><span class="n">02</span><div><h3>Custom design</h3><p>Designed from scratch around your photos and your story. Never a template.</p></div></li>
-    <li class="stage"><span class="n">03</span><div><h3>Build</h3><p>A fast site that works on phones, with the search basics in place so Google can find you.</p></div></li>
-    <li class="stage"><span class="n">04</span><div><h3>Web address and hosting</h3><p>You buy your own web address and I help you do it. I set up the hosting and connect everything, so the technical part is handled.</p></div></li>
-    <li class="stage"><span class="n">05</span><div><h3>Launch</h3><p>Your site goes live in two to three weeks.</p></div></li>
-    <li class="stage"><span class="n">06</span><div><h3>Handover</h3><p>Everything is handed over, so you own the site, the web address and the logins. Fourteen days of free fixes after launch.</p></div></li>
+    <li class="stage"><span class="n">01</span><div><h3>You and me</h3><p>A few prompts, then real conversation. You work directly with me, the owner. No sales team, no handoffs. Every handoff loses a bit of what makes your business special.</p></div></li>
+    <li class="stage"><span class="n">02</span><div><h3>Custom design</h3><p>Built from scratch around your photos, your story and your business. Never a template. Thousands of templates exist. This is custom built for you, with the <strong>human touch</strong> that makes your business stand out.</p></div></li>
+    <li class="stage"><span class="n">03</span><div><h3>Build</h3><p>65% of Google searches and 63% of web traffic is mobile. We build to be beautiful and fast on phones and desktop.</p></div></li>
+    <li class="stage"><span class="n">04</span><div><h3>Built so Google can find you</h3><p>Everyone sells SEO as an upsell. We build it in from day one so Google can find you.</p></div></li>
+    <li class="stage"><span class="n">05</span><div><h3>You own it</h3><p><strong>I built it but you own it. No subscription.</strong> Site, domain, logins and analytics, all yours. A product, not a subscription.</p></div></li>
+    <li class="stage"><span class="n">06</span><div><h3>Launch and handover</h3><p>Everything handed over at launch. You own it and can take it and run. No strings attached.</p><p class="aside">Want ongoing support? I know, I just trashed subscriptions. But if you want health checks, analytics and small updates as you grow, I offer a plan. I am not disappearing.</p></div></li>
   </ol>
 </div></section>
 
@@ -331,44 +345,44 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0}
 <section class="pricing" id="pricing"><div class="wrap">
   <div class="eyebrow">Pricing, two ways to launch</div>
   <h2>Simple, honest pricing, <em>no surprises.</em></h2>
-  <p class="lead">One time prices, with no monthly fees to me. You buy your own web address and when the site is built I hand over everything, so you own it all. Ongoing care and a Facebook ad campaign are optional.</p>
+  <p class="lead">One-time prices, with no monthly fees to me. You buy your own web address and when the site is built I hand over everything, so you own it all. Ongoing care and a Facebook ad campaign are optional.</p>
 
   <div class="recap"><div class="t">Both packages include</div>
-    <ul><li>Custom design</li><li>Up to 5 pages</li><li>Mobile optimized</li><li>Basic SEO</li><li>Google Analytics</li><li>Social media links</li><li>Images</li><li>Website launch</li></ul>
+    <ul><li>Custom design</li><li>Up to 5 pages</li><li>Mobile-optimized</li><li>Basic SEO</li><li>Google Analytics</li><li>Social media links</li><li>Images</li><li>Website launch</li></ul>
     <a class="more" href="#includes">See the full list</a>
   </div>
 
   <div class="plans main">
     <div class="plan top">
-      <div class="head"><span class="tier">Complete</span><span class="badge dark">Top tier</span></div>
+      <div class="head"><span class="tier">Complete: Website + Ad Campaign</span><span class="badge dark">Top tier</span></div>
       <div class="price"><b>$1,500</b><span>all in</span></div>
-      <div class="founding">Founding client price <s>$2,500 regular</s></div>
+      <div class="founding">Founding client price <s>$2,800 regular</s></div>
       <p class="small">For my first three clients, in exchange for a testimonial and permission to show your site.</p>
-      <div class="tag">Website plus one time campaign</div>
-      <p>The website and a Facebook ad campaign together, so people see your site the day it goes live.</p>
+      <div class="tag">Website + one-time ad campaign</div>
+      <p>The same website as Launch, plus a Facebook ad campaign, so people see your site the day it goes live.</p>
       <ul class="list">
-        <li>Everything in Launch</li>
+        <li>Everything in Launch, including up to 5 pages</li>
         <li>A Facebook ad campaign, built and tested for you</li>
-        <li>Ad management plus up to $550 in ads included</li>
+        <li>$450 for campaign setup and management, plus $550 spent directly on Facebook ads (paid upfront, with proof)</li>
       </ul>
       <p class="note small">You buy your own web address, so you keep it. It usually runs around $15 per year, paid to the seller and not to me.</p>
-      <a class="pillbtn" href="mailto:mikeriveroakdesign@gmail.com?subject=Complete%20package">Get the $1,500 Complete <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="pillbtn" href="mailto:mikeriveroakdesign@gmail.com?subject=Complete%20package&amp;body=1.%20What%20is%20your%20business%20name%2C%20and%20how%20should%20it%20appear%20on%20the%20website%3F%0D%0A%0D%0A%0D%0A2.%20Briefly%20describe%20your%20business%20and%20the%20services%20you%20offer.%0D%0A%0D%0A%0D%0A3.%20Who%20are%20your%20ideal%20customers%3F%0D%0A%0D%0A%0D%0A4.%20What%20websites%20do%20you%20like%2C%20and%20what%20do%20you%20like%20about%20their%20design%3F%0D%0A%0D%0A%0D%0A5.%20Do%20you%20have%20a%20logo%2C%20photos%2C%20brand%20colors%2C%20or%20existing%20content%20to%20use%3F%0D%0A%0D%0A%0D%0A6.%20What%20is%20your%20target%20launch%20date%2C%20and%20what%20would%20make%20this%20website%20a%20success%20for%20your%20business%3F%0D%0A%0D%0A">Get the $1,500 Complete <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
 
     <div class="plan">
       <div class="head"><span class="tier">Launch</span><span class="badge">Website only</span></div>
-      <div class="price"><b>$500</b><span>one time</span></div>
-      <div class="founding">Founding client price <s>$1,500 regular</s></div>
+      <div class="price"><b>$500</b><span>one-time</span></div>
+      <div class="founding">Founding client price <s>$1,800 regular</s></div>
       <p class="small">For my first three clients, in exchange for a testimonial and permission to show your site.</p>
       <p>A beautiful custom website, built from scratch. No templates.</p>
       <ul class="list">
-        <li>Custom homepage and four inner pages</li>
+        <li>Up to 5 pages</li>
         <li>Works on phones and is set up for Google</li>
         <li>Everything handed over, so you own it and owe me nothing</li>
-        <li>Fourteen days of free fixes after launch</li>
+        <li>14 days of free minor fixes after launch</li>
       </ul>
       <p class="note small">You buy your own web address, so you keep it. It usually runs around $15 per year, paid to the seller and not to me.</p>
-      <a class="link" href="mailto:mikeriveroakdesign@gmail.com?subject=Launch%20package"><span>Start for $500 <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="link" href="mailto:mikeriveroakdesign@gmail.com?subject=Launch%20package&amp;body=1.%20What%20is%20your%20business%20name%2C%20and%20how%20should%20it%20appear%20on%20the%20website%3F%0D%0A%0D%0A%0D%0A2.%20Briefly%20describe%20your%20business%20and%20the%20services%20you%20offer.%0D%0A%0D%0A%0D%0A3.%20Who%20are%20your%20ideal%20customers%3F%0D%0A%0D%0A%0D%0A4.%20What%20websites%20do%20you%20like%2C%20and%20what%20do%20you%20like%20about%20their%20design%3F%0D%0A%0D%0A%0D%0A5.%20Do%20you%20have%20a%20logo%2C%20photos%2C%20brand%20colors%2C%20or%20existing%20content%20to%20use%3F%0D%0A%0D%0A%0D%0A6.%20What%20is%20your%20target%20launch%20date%2C%20and%20what%20would%20make%20this%20website%20a%20success%20for%20your%20business%3F%0D%0A%0D%0A"><span>Start for $500 <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
     </div>
 
   </div>
@@ -376,9 +390,9 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0}
   <div class="extras-head"><span>Optional extras</span></div>
   <div class="plans extras">
     <div class="plan addon">
-      <div class="head"><span class="tier">Add on</span><span class="badge">For any package</span></div>
+      <div class="head"><span class="tier">Add-on</span><span class="badge">For any package</span></div>
       <div class="price"><b>$1,000</b><span>all in</span></div>
-      <p>A real ad campaign is more than boosting a post. Add it to any site, with two ways to pay for the ads.</p>
+      <p>A real ad campaign is more than boosting a post. Add a Facebook ad campaign to any site. Your advertising budget goes toward reaching potential customers, while I handle the campaign setup and management.</p>
       <ul class="list">
         <li>Tracking set up on your site</li>
         <li>Three to four audiences researched and tested</li>
@@ -387,25 +401,33 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0}
         <li>A report on what worked</li>
       </ul>
       <div class="pay">
-        <div class="t">Payment options</div>
-        <p><strong>$1,000 all in:</strong> I cover everything, including Facebook spend.</p>
-        <p><strong>$450 plus $50 per day:</strong> you pay Facebook directly, and I charge $450 for management.</p>
+        <div class="t">Where the $1,000 goes</div>
+        <p><strong>$450:</strong> campaign setup and management, paid to Riveroak Design.</p>
+        <p><strong>$550:</strong> spent directly on Facebook ads. I show you proof.</p>
+        <p>Paid upfront.</p>
       </div>
-      <a class="link" href="mailto:mikeriveroakdesign@gmail.com?subject=Campaign%20add%20on"><span>Add the campaign to any site <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="link" href="mailto:mikeriveroakdesign@gmail.com?subject=Campaign%20add%20on&amp;body=1.%20What%20is%20your%20business%20name%2C%20and%20how%20should%20it%20appear%20on%20the%20website%3F%0D%0A%0D%0A%0D%0A2.%20Briefly%20describe%20your%20business%20and%20the%20services%20you%20offer.%0D%0A%0D%0A%0D%0A3.%20Who%20are%20your%20ideal%20customers%3F%0D%0A%0D%0A%0D%0A4.%20What%20websites%20do%20you%20like%2C%20and%20what%20do%20you%20like%20about%20their%20design%3F%0D%0A%0D%0A%0D%0A5.%20Do%20you%20have%20a%20logo%2C%20photos%2C%20brand%20colors%2C%20or%20existing%20content%20to%20use%3F%0D%0A%0D%0A%0D%0A6.%20What%20is%20your%20target%20launch%20date%2C%20and%20what%20would%20make%20this%20website%20a%20success%20for%20your%20business%3F%0D%0A%0D%0A"><span>Add the campaign to any site <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
     </div>
 
     <div class="plan care">
-      <span class="tier">Ongoing care, optional</span>
+      <span class="tier">Ongoing care</span>
       <div class="price"><b>$99</b><span>per month</span></div>
-      <p>Fourteen days of fixes come with every site. After that, keep your site fresh with a simple monthly plan.</p>
+      <p>14 days of minor fixes come with every site launch. After that, keep it fresh.</p>
       <ul class="list">
-        <li>Up to three small edits each month</li>
-        <li>One new page each month</li>
-        <li>Basic upkeep and quick turnaround</li>
-        <li>Nothing carries over. Bigger work is quoted separately.</li>
+        <li>Health checks</li>
+        <li>Monthly Google Analytics report emailed</li>
+        <li>Up to three small edits</li>
+        <li>One new page per month built from your existing design</li>
+        <li>No full rebuilds, no custom features</li>
+        <li>Quick turnaround. Nothing carries over. Bigger work quoted separately.</li>
       </ul>
-      <a class="pillbtn" href="mailto:mikeriveroakdesign@gmail.com?subject=Ongoing%20care">Add ongoing care <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p class="fine">Not 24/7 support</p>
+      <a class="pillbtn" href="mailto:mikeriveroakdesign@gmail.com?subject=Ongoing%20care&amp;body=1.%20What%20is%20your%20business%20name%2C%20and%20how%20should%20it%20appear%20on%20the%20website%3F%0D%0A%0D%0A%0D%0A2.%20Briefly%20describe%20your%20business%20and%20the%20services%20you%20offer.%0D%0A%0D%0A%0D%0A3.%20Who%20are%20your%20ideal%20customers%3F%0D%0A%0D%0A%0D%0A4.%20What%20websites%20do%20you%20like%2C%20and%20what%20do%20you%20like%20about%20their%20design%3F%0D%0A%0D%0A%0D%0A5.%20Do%20you%20have%20a%20logo%2C%20photos%2C%20brand%20colors%2C%20or%20existing%20content%20to%20use%3F%0D%0A%0D%0A%0D%0A6.%20What%20is%20your%20target%20launch%20date%2C%20and%20what%20would%20make%20this%20website%20a%20success%20for%20your%20business%3F%0D%0A%0D%0A">Add ongoing care <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
+  </div>
+  <div class="hosting">
+    <h3>Hosting and ownership</h3>
+    <p>Your website is hosted at no additional cost under the current arrangement. You own the site and receive the files, domain access, logins and analytics access at launch. If a hosting provider ever starts charging, that cost is theirs, not mine, and I will let you know before it applies.</p>
   </div>
 </div></section>
 
@@ -423,9 +445,9 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0}
     <p class="mail">Or write to <a href="mailto:mikeriveroakdesign@gmail.com">mikeriveroakdesign@gmail.com</a></p>
   </div>
   <div class="base">
-    <p class="also">While I can build your website, I&rsquo;ve also partnered with <em>a full development team</em> if you ever need custom software. I can also connect you with people who can help with bookkeeping, taxes or setting up payment processing.</p>
+    <p class="also">Beyond your website, I can connect you with trusted professionals for <em>bookkeeping, taxes, and payment processing.</em> Need something more advanced? I also work with <em>a full development team</em> for custom software and more complex projects. One connection, more of what your business needs.</p>
     <img class="foot-logo" src="images/logo-dark.png" alt="Riveroak Design" width="195" height="110" loading="lazy">
-    <div class="legal"><span>&copy; 2026 Riveroak Design. Custom web design.</span><span>Built from scratch for your business.</span></div>
+    <div class="legal"><span>&copy; 2026 Riveroak Design. Custom web design.</span> <span>Built from scratch for your business.</span></div>
   </div>
 </div></section>
 </main>
@@ -451,6 +473,28 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0}
     });
   },{rootMargin:'-45% 0px -50% 0px'});
   ['offer','work','process','includes','pricing','contact'].forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});
+})();
+
+// Ease sections in as they scroll into view. If anything fails, the page stays fully visible.
+(function(){
+  var root=document.documentElement;
+  try{
+    var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduce||!('IntersectionObserver' in window)){root.dataset.rv='1';root.classList.remove('js');return;}
+    var sel=['.offer .eyebrow','.offer h2','.offer .lead','.step','.found','.process .eyebrow','.process h2','.process .lead','.stage','.includes .eyebrow','.includes h2','.inc li','.work .eyebrow','.work h2','.project','.pricing .eyebrow','.pricing h2','.pricing .lead','.recap','.plan','.extras-head','.hosting','.contact .how','.contact h2','.candle','.start','.also'].join(',');
+    var els=[].slice.call(document.querySelectorAll(sel));
+    var seen=new Map();
+    els.forEach(function(el){
+      var p=el.parentNode,i=seen.get(p)||0;seen.set(p,i+1);
+      el.style.setProperty('--d',Math.min(i,3)*80+'ms');
+      el.classList.add('reveal');
+    });
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{rootMargin:'0px 0px -8% 0px',threshold:0.06});
+    els.forEach(function(el){io.observe(el);});
+    root.dataset.rv='1';
+  }catch(err){root.dataset.rv='1';root.classList.remove('js');}
 })();
 </script>
 </body>
